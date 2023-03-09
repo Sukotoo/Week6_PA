@@ -21,7 +21,11 @@ public class statsCalculator
     {
         Arrays.sort(values);
     }
-
+    public double[] sortData(double[] values) {
+        double[] copy = values;
+        Arrays.sort(copy);
+        return copy;
+    }
     public double calculateMax()
     {
         //for (int i = 0; i < ; i++) {
