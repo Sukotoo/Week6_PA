@@ -6,14 +6,11 @@ public class statsCalculator
     public statsCalculator()
     {
         values = new double[20];
-        sortedValues = values;
-        sortData();
     }
     public statsCalculator(double[] values)
     {
         this.values = values;
-        sortedValues = values;
-        sortData();
+        sortData(values);
     }
 
 
@@ -25,11 +22,24 @@ public class statsCalculator
         double[] copy = values;
         Arrays.sort(copy);
         return copy;
+    } // for me
+    public double calculateMax() {
+        double max = 0;
+        for (int i = 0; i < values.length; i++)
+        {
+            if(values[i] > max)
+                max = values[i];
+        }
+        return max;
     }
-    public double calculateMax()
-    {
-        //for (int i = 0; i < ; i++) {
-            
-        return 0.1;
+    public double calculateMin() {
+        double min = 0;
+        for (int i = 0; i < values.length; i++) {
+            if(values[i] < min)
+                min = values[i];
+        }
+        return min;
     }
+
+
 }
